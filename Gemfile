@@ -54,3 +54,8 @@ gem 'bootstrap-sass', github: 'twbs/bootstrap-sass'
 gem 'bootstrap-sass-extras'
 gem 'tzinfo-data'
 gem 'validates_formatting_of'
+
+
+#my own gems
+gem 'cancan'
+gem 'pg'
