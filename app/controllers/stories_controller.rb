@@ -4,6 +4,7 @@ class StoriesController < ApplicationController
   before_filter :require_user_signed_in, only: [:new, :edit, :create, :update, :destroy]
 
   before_action :set_story, only: [:show, :edit, :update, :destroy]
+  before_action :validate_user, only: [:edit,:update,:destroy]
 
   # GET /stories
   # GET /stories.json
@@ -67,6 +68,20 @@ class StoriesController < ApplicationController
   end
 
   private
+    # User can only edit and delete their own stories
+    def validate_user
+       unless @story.user.id == current_user.id
+          begin
+          redirect_to(:back, :status => 301, flash: {error: "Sorry. You can not edit or delete this story because you are not the author"})
+
+        rescue ActionController::RedirectBackError
+          redirect_to(root_path)
+        end
+
+       end
+    end 
+
+
     # Use callbacks to share common setup or constraints between actions.
     def set_story
       @story = Story.find(params[:id])

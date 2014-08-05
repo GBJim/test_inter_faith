@@ -57,5 +57,4 @@ gem 'validates_formatting_of'
 
 
 #my own gems
-gem 'cancan'
 gem 'pg'
