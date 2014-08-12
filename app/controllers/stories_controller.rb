@@ -12,6 +12,10 @@ class StoriesController < ApplicationController
     @stories = Story.all
   end
 
+  def intro
+    @stories = Story.all
+  end
+
   # GET /stories/1
   # GET /stories/1.json
   def show

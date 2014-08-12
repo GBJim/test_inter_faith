@@ -1,0 +1,7 @@
+
+        <div class = "col-md-4">
+            <p class = "text-left"><%=story.title%></p>
+            <%= image_tag story.image_url(:thumb) %>
+            <p><%=story.content%></p>
+            <%= link_to("Read More", story, :class => "pull-right btn btn-xs btn-primary") %>
+        </div>
