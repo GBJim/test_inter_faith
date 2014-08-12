@@ -5,12 +5,20 @@
 
 <div class="fieldset">
   <dl>
+      <dt class="label label-default">Religion</dt>
+      <dd><pre class="prettyprint"><%= @story.religion.name || "None"%></pre></dd>
       <dt class="label label-default"><%= model_class.human_attribute_name(:title) %></dt>
       <dd><pre class="prettyprint"><%= @story.title %></pre></dd>
       <dt class="label label-default"><%= model_class.human_attribute_name(:content) %></dt>
       <dd><pre class="prettyprint"><%= @story.content %></pre></dd>
   </dl>
 </div>
+
+<%= render_photo(@story.image) %>
+
+
+
+
 
 <div class="form-group">
   <%= link_to t('.back', :default => t("helpers.links.back")),

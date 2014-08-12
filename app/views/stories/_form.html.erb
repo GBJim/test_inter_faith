@@ -1,21 +1,23 @@
-<%= form_for @story, :html => { :class => 'form-horizontal form-model' , :multipart => true} do |f| %>
+<%= simple_form_for @story, :html => { :class => 'form-horizontal form-model' , :multipart => true} do |f| %>
   <div class="form-group">
-    <%= f.label :title, :class => 'control-label col-md-2' %>
+  
     <div class="col-md-10">
-      <%= f.text_field :title, :class => 'text-field form-control' %>
+      <%= f.input :religion_id, :include_blank => false, collection: @religions_list%>
+
+      <%= f.input :title  %>
     </div>
   </div>
   <div class="form-group">
-    <%= f.label :content, :class => 'control-label col-md-2' %>
+ 
     <div class="col-md-10">
-      <%= f.text_area :content, :class => 'text-field form-control' %>
+      <%= f.input :content, :input_html => {class: "text-field form-control"} %>
     </div>
   </div>
 
    <div class="form-group">
-    <%= f.label :image, :class => 'control-label col-md-2' %>
+  
     <div class="col-md-10">
-      <%= f.file_field :image, :class => 'form-control' %>
+      <%= f.input :image, :as =>:file,:class => 'form-control' %>
     </div>
   </div>
 
@@ -24,7 +26,7 @@
 
   <div class="form-group">
     <div class='col-md-offset-2 col-md-10'>
-      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= f.button :submit, :class => 'btn btn-primary' %>
       <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                   stories_path, :class => 'btn btn-default' %>
     </div>

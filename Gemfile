@@ -59,3 +59,5 @@ gem 'validates_formatting_of'
 #my own gems
 gem 'pg'
 gem 'carrierwave'
+gem 'rmagick'
+gem 'jquery-turbolinks'

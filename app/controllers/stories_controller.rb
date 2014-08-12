@@ -5,10 +5,16 @@ class StoriesController < ApplicationController
 
   before_action :set_story, only: [:show, :edit, :update, :destroy]
   before_action :validate_user, only: [:edit,:update,:destroy]
+  before_action :list_religions, only: [:edit,:update,:destroy,:new]
 
   # GET /stories
   # GET /stories.json
   def index
+    @stories = Story.all
+  end
+
+  def intro
+    @religions = Religion.all
     @stories = Story.all
   end
 
@@ -81,6 +87,9 @@ class StoriesController < ApplicationController
        end
     end 
 
+    def list_religions
+      @religions_list = Religion.all.map { |r| [r.name,r.id]  }
+    end
 
     # Use callbacks to share common setup or constraints between actions.
     def set_story
