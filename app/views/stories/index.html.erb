@@ -21,11 +21,10 @@
         <td><%=l story.created_at, format: :long %></td>
         <td>
           <%= link_to story_path(story), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
-            <%= glyph 'info-sign' %>
-            <%= glyph 'pencil' %>
+            Content
           <%- end -%>
           <%= link_to story_path(story), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
-            <%= glyph 'remove' %>
+            Delete
           <%- end -%>
         </td>
       </tr>

@@ -1,18 +1,10 @@
 <%- model_class = Story -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => Story %></h1>
+  <h1><%= @story.title %></h1>
 </div>
 
-<div class="fieldset">
-  <dl>
-      <dt class="label label-default">Religion</dt>
-      <dd><pre class="prettyprint"><%= @story.religion.name || "None"%></pre></dd>
-      <dt class="label label-default"><%= model_class.human_attribute_name(:title) %></dt>
-      <dd><pre class="prettyprint"><%= @story.title %></pre></dd>
-      <dt class="label label-default"><%= model_class.human_attribute_name(:content) %></dt>
-      <dd><pre class="prettyprint"><%= @story.content %></pre></dd>
-  </dl>
-</div>
+<p class ="story-container"><%=@story.content%></p>
+
 
 <%= render_photo(@story.image) %>
 

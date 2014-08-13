@@ -3,9 +3,12 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 //= require jquery.capty.min.js
 ready = ->
- 	$('.fix').capty({
+ 	$('.religion_image').capty({
+
   	animation: 'fade',
-  	speed:     400
+  	speed:     400,
+  	height:   120,
+
 	});
 
 $(document).ready(ready)
