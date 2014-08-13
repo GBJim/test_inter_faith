@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 //= require jquery.capty.min.js
-ready = ->
+caption = ->
  	$('.religion_image').capty({
 
   	animation: 'fade',
@@ -11,4 +11,10 @@ ready = ->
 
 	});
 
-$(document).ready(ready)
+mountCKEeditor = ->
+	$('.ckeditor').ckeditor({});
+
+
+$(document).ready(caption)
+$(document).ready(mountCKEeditor)
+

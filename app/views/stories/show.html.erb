@@ -3,7 +3,7 @@
   <h1><%= @story.title %></h1>
 </div>
 
-<p class ="story-container"><%=@story.content%></p>
+<div class ="story-container"><%=raw @story.content%></div>
 
 
 <%= render_photo(@story.image) %>
