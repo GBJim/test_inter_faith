@@ -1,34 +1,28 @@
 <%= simple_form_for @story, :html => { :class => 'form-horizontal form-model' , :multipart => true} do |f| %>
-  <div class="form-group">
-  
-    <div class="col-md-10">
-      <%= f.input :religion_id, :include_blank => false, collection: @religions_list%>
-
-      <%= f.input :title  %>
-    </div>
-  </div>
-  <div class="form-group">
  
-    <div class="col-md-10">
-      <%= f.input :content, :input_html => {class: "text-field form-control ckeditor"} %>
-    </div>
-  </div>
-
    <div class="form-group">
-  
-    <div class="col-md-10">
-      <%= f.input :image, :as =>:file,:class => 'form-control' %>
-    </div>
+    <div class="col-md-12">
+      <%= f.input :religion_id, :include_blank => false, collection: @religions_list, :input_html => {class: "dropdown"}  %>
+      </div>
+</div>
+    <div class="form-group">
+    <div class="col-md-12">
+      <%= f.input :title  %>
   </div>
+</div>
+<div class="form-group">
+    <div class="col-md-12">
+      <%= f.input :content, :input_html => {class: "text-field form-control ckeditor"} %>
+       
+  </div>
+</div>
 
 
 
-
-  <div class="form-group">
-    <div class='col-md-offset-2 col-md-10'>
+ 
       <%= f.button :submit, :class => 'btn btn-primary' %>
       <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                   stories_path, :class => 'btn btn-default' %>
-    </div>
-  </div>
+    
+ 
 <% end %>

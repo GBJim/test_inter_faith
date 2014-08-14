@@ -12,7 +12,10 @@ caption = ->
 	});
 
 mountCKEeditor = ->
-	$('.ckeditor').ckeditor({});
+	$('.ckeditor').ckeditor({
+	
+	
+	});
 
 
 $(document).ready(caption)

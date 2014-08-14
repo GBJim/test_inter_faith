@@ -4,7 +4,7 @@ class Story < ActiveRecord::Base
  
   mount_uploader :image, AvatarUploader
 
-  validates :title, presence: true, length: { in: 6..30 }
+  validates :title, presence: true, length: { in: 6..50 }
   validates :religion_id, presence: true
   validates :content, length: { minimum: 30 }
 
