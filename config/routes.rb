@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
   root to: 'religions#index'
-  resources :stories, :religions
+  resources :religions
+  resources :comments
+  resources :stories do
+    resources :comments
+  end
 
 
 

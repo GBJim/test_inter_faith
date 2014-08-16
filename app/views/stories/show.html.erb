@@ -26,3 +26,21 @@
               :class => 'btn btn-danger pull-right' %>
 </div>
 
+Please leave your comment:
+
+<%= simple_form_for([@story,@comment]) do |f| %>
+
+  <%= f.input :content, label: 'Your opinion please' %>
+ 
+  <%= f.button :submit %>
+
+<%end%>
+
+
+
+
+
+<% @story.comments.each do |comment| %>
+<p><%=comment.content %></p>
+<% end %>
+
