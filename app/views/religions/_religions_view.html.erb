@@ -1,0 +1,8 @@
+	<div class = "col-md-4">
+		<%= link_to(religion) do %>
+			<%= image_tag( religion.image,:size => "300x300", :class => "religion_image",  :alt => religion.description) %>
+				<% end %>
+			<%= link_to(religion) do %>
+			<h3 class = "religion-title"><%= religion.name %></h3>
+			<% end %>
+		</div>

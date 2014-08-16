@@ -7,7 +7,7 @@ caption = ->
 
   	animation: 'fade',
   	speed:     400,
-  	height:   120,
+  	height:   130,
 
 	});
 

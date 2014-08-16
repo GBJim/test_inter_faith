@@ -1,0 +1,7 @@
+
+        <div class = "col-md-4">
+            <h3 class = "text-left story-title"><%=story.title%></h3>
+            <%= render_photo(story.image) %>
+            <p ><%=render_content(story.content)%></p>
+            <%= link_to("Read More", story, :class => "pull-right btn btn-xs btn-primary") %>
+        </div>

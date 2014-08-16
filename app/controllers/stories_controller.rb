@@ -13,10 +13,7 @@ class StoriesController < ApplicationController
     @stories = Story.all
   end
 
-  def intro
-    @religions = Religion.all
-    @stories = Story.all
-  end
+  
 
   # GET /stories/1
   # GET /stories/1.json
@@ -68,7 +65,7 @@ class StoriesController < ApplicationController
   def destroy
     @story.destroy
     respond_to do |format|
-      format.html { redirect_to stories_url, notice: 'Story was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Story was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

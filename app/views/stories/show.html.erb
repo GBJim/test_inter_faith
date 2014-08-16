@@ -3,7 +3,9 @@
   <h1><%= @story.title %></h1>
 </div>
 
-<div class ="story-container"><%=raw @story.content%></div>
+<div class ="story-container jumbotron centered">
+  <%=raw @story.content%>
+</div>
 
 
 <%= render_photo(@story.image, "story-image")%>
@@ -16,11 +18,11 @@
   <%= link_to t('.back', :default => t("helpers.links.back")),
               stories_path, :class => 'btn btn-default'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_story_path(@story), :class => 'btn btn-default' %>
+              edit_story_path(@story), :class => 'btn btn-default pull-left' %>
   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
               story_path(@story),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-              :class => 'btn btn-danger' %>
+              :class => 'btn btn-danger pull-right' %>
 </div>
 

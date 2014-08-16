@@ -19,6 +19,7 @@
     margin-right: 30px;
     margin-left: 30px;
     font-size:1.5em;
+    background-color: #b0c4de;
 
 }
 
@@ -34,13 +35,13 @@
 
 
 .story-title{
-white-space: nowrap;}
+white-space: nowrap;
+font-size: 1.2em;}
 
 .story-image{
 	margin-left: 5em;
 
 }
-
 
 body{
 	
@@ -50,4 +51,13 @@ body{
 .form-group{
 		padding-left: 5em;
 
+}
+
+.page-header{
+	padding-left: 2em;
+}
+
+div.jumbotron{
+	  background-color: #EFEEEE;
+	  border-radius: 30px;
 }

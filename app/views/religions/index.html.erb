@@ -1,0 +1,16 @@
+<div id = "welcome_view">
+	<h1>InterFaith</h1>
+	<h2 class = "subtitle">Share The Wisdom From Each Religion</h2>
+</div>
+
+
+
+<div id ="religions_view" class ="row jumbotron"">
+    <%= render :partial => 'religions_view', :collection => @religions, :as => :religion %>
+</div>
+
+
+
+<div id = "stories_view" class ="row">
+    <%= render :partial => 'stories_view', :collection => @stories, :as => :story %>
+</div>
